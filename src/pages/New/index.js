@@ -33,6 +33,7 @@ export default function New(){
 
   useEffect(() => {
     async function loadCustomers(){
+      /* eslint-disable */
       const querySnapshot = await getDocs(listRef)
       .then( (snapshot) => {
         let lista = [];
@@ -68,7 +69,7 @@ export default function New(){
 
     loadCustomers();    
   }, [id])
-
+  /* eslint-enable */
 
   async function loadId(lista){
     const docRef = doc(db, "chamados", id);
